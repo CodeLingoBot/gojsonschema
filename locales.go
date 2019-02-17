@@ -210,7 +210,7 @@ func (l DefaultLocale) NumberLT() string {
 	return `Must be less than {{.max}}`
 }
 
-// Schema validators
+// RegexPattern: Schema validators
 func (l DefaultLocale) RegexPattern() string {
 	return `Invalid regex pattern '{{.pattern}}'`
 }
@@ -279,17 +279,17 @@ func (l DefaultLocale) HttpBadStatus() string {
 	return `Could not read schema from HTTP, response status is {{.status}}`
 }
 
-// Replacement options: field, description, context, value
+// ErrorFormat: Replacement options: field, description, context, value
 func (l DefaultLocale) ErrorFormat() string {
 	return `{{.field}}: {{.description}}`
 }
 
-//Parse error
+// ParseError: Parse error
 func (l DefaultLocale) ParseError() string {
 	return `Expected: {{.expected}}, given: Invalid JSON`
 }
 
-//If/Else
+// ConditionThen: If/Else
 func (l DefaultLocale) ConditionThen() string {
 	return `Must validate "then" as "if" was valid`
 }

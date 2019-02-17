@@ -35,7 +35,7 @@ type jsonSchemaType struct {
 	types []string
 }
 
-// Is the schema typed ? that is containing at least one type
+// IsTyped Is the schema typed ? that is containing at least one type
 // When not typed, the schema does not need any type validation
 func (t *jsonSchemaType) IsTyped() bool {
 	return len(t.types) > 0
